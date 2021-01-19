@@ -1,0 +1,25 @@
+.nav{
+    color: #FEDAA8;
+    display: flex;
+    position: absolute;
+    top: 125%;
+    width: 100%;
+    left: 10%;
+    &-li{
+        line-height: 2em;
+    }
+    &-button{
+        background-color: #FEDAA8;
+        color: #333333;
+        font-weight: bold;
+        padding: 0.3em 0.5em;
+        border: none;
+        border-radius: 15px;
+    }
+    &-button:hover{
+        background-color: #333333;
+        color: #FEDAA8;
+        border: solid #FEDAA8 2px;
+    }
+
+}
