@@ -7,7 +7,7 @@ import Header from "../Header";
 const App=() => {
     return (
         <div className="app">
-            
+            <Particles options={particlesOptions}/>
             
             
             

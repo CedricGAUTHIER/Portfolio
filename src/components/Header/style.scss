@@ -1,7 +1,25 @@
 .header{
-    border: solid red 2px;
+    
+    position: absolute;
+    
+    top: 0;
+    left:30%;
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
     &-title{
-        color: #FEDAA8;
-        
+        background-color: #333333;
+        border: solid #FEDAA8 2px;
+        text-align: center;
+        padding: 0.5em;
+        font-size: 2em;
+        border-radius: 25%;
+        margin-bottom: 0.5em;
+    }
+    &-section{
+        text-align: center;
+        line-height: 2em;
     }
 }
