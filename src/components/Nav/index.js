@@ -10,19 +10,25 @@ import Projects from '../Projects';
 import Contact from '../Contact';
 
 
-const Nav=({navObject, setnavObject}) => {
-    
+const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
+    const ClassAbout= buttonObject.about ? "nav-button-visited" : "nav-button";
+    const ClassBefore= buttonObject.before ? "nav-button-visited" : "nav-button";
+    const ClassTraining= buttonObject.training ? "nav-button-visited" : "nav-button";
+    const ClassNow= buttonObject.now ? "nav-button-visited" : "nav-button";
+    const ClassCV= buttonObject.cv ? "nav-button-visited" : "nav-button";
+    const ClassProjects= buttonObject.projects ? "nav-button-visited" : "nav-button";
+    const ClassContact= buttonObject.contact ? "nav-button-visited" : "nav-button";
         return (
         
         <div className="nav">
             
             <ul className="nav-ul">
                 <li className="nav-li">
+                    
                     <button
-                        className="nav-button"
+                        className={ClassAbout}
                         onClick={()=>{
-                            
-                            setnavObject({
+                            setNavObject({
                                 about: !navObject.about,
                                 before: false,
                                 training: false,
@@ -31,18 +37,19 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: false
                             });
+                             setButtonObject({...buttonObject,about:true})
                         }}
-                        >Présentation
+                        >Qui suis-je ?
                     </button>
                     
                         
                 </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassBefore}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: !navObject.before,
                                 training: false,
@@ -51,16 +58,17 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: false
                             });
+                            setButtonObject({...buttonObject,before:true})
                         }}
                         >Avant d'être développeur</button>
                         
                     </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassTraining}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: false,
                                 training: !navObject.training,
@@ -69,16 +77,17 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: false
                             });
+                            setButtonObject({...buttonObject,training:true})
                         }}
                         >Ma formation de développeur</button>
                         
                     </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassNow}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: false,
                                 training: false,
@@ -87,16 +96,17 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: false
                             });
+                            setButtonObject({...buttonObject,now:true})
                         }}
                         >Et maintenant ? </button>
                         
                     </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassCV}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: false,
                                 training: false,
@@ -105,16 +115,17 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: false
                             });
+                            setButtonObject({...buttonObject,cv:true})
                         }}
                         >Mon CV </button>
                         
                     </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassProjects}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: false,
                                 training: false,
@@ -123,16 +134,17 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:!navObject.projects,
                                 contact: false
                             });
+                            setButtonObject({...buttonObject,projects:true})
                         }}
                         >Projets / Réalisations </button>
                         
                     </li>
                 <li className="nav-li">
                     <button
-                        className="nav-button"
+                        className={ClassContact}
                         onClick={()=>{
                             
-                            setnavObject({
+                            setNavObject({
                                 about: false,
                                 before: false,
                                 training: false,
@@ -141,6 +153,7 @@ const Nav=({navObject, setnavObject}) => {
                                 projects:false,
                                 contact: !navObject.contact
                             });
+                            setButtonObject({...buttonObject,contact:true})
                         }}
                         >Me contacter </button>
                         

@@ -7,7 +7,16 @@ import Main from "../Main";
 import Nav from "../Nav";
 
 const App=() => {
-    const [navObject,setnavObject]=useState({
+    const [navObject,setNavObject]=useState({
+        about: false,
+        before: false,
+        training: false,
+        now: false,
+        cv: false,
+        projects:false,
+        contact: false
+    });
+    const [buttonObject,setButtonObject]=useState({
         about: false,
         before: false,
         training: false,
@@ -17,7 +26,6 @@ const App=() => {
         contact: false
     });
     
-    
     return (
         <div className="app">
             <Particles className="particles" options={particlesOptions}/>
@@ -25,7 +33,9 @@ const App=() => {
             <Main />
             <Nav
                 navObject={navObject}
-                setnavObject={setnavObject}
+                setNavObject={setNavObject}
+                buttonObject={buttonObject}
+                setButtonObject={setButtonObject}
             />
         </div>
     );
