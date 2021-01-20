@@ -1,10 +1,59 @@
-.about{
+.content{
     background-color: #FEDAA8;
     color: #333333;
     border-radius: 10px;
-    width: 63%;
+    max-width: 63%;
     padding: 0.5em;
     margin-top: 1em;
+    overflow-y: scroll;
+    height: 200px;
     
+    &-about-title{
+        text-align: center;
+        animation-duration: 7s;
+        animation-name: slideinabout;
+        
+    }
+
+    &-before-title{
+        text-align: center;
+        animation-duration: 7s;
+        animation-name: slideinbefore;
+        
+    }
     
+}
+em{
+    font-weight: bold;
+    color: #1a5f29
+}
+
+@keyframes slideinabout {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    50%{
+        margin-left: -40%;
+        width: 100%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slideinbefore {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    50%{
+        margin-left: -29%;
+        width: 100%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
 }
