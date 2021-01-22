@@ -1,59 +1,81 @@
 .content{
+    position: absolute;
+    right: 100px;
     background-color: #FEDAA8;
     color: #333333;
     border-radius: 10px;
     max-width: 63%;
     padding: 0.5em;
     margin-top: 1em;
-    overflow-y: scroll;
-    height: 200px;
+    height: 700px;
+    border: solid 2px #FEDAA8;
     
-    &-about-title{
-        text-align: center;
-        animation-duration: 7s;
-        animation-name: slideinabout;
         
-    }
+    
+    &-text{
+        animation-duration: 3s;
+        animation-name: slidein;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        
+       
+        height: 600px;
 
-    &-before-title{
-        text-align: center;
-        animation-duration: 7s;
-        animation-name: slideinbefore;
-        
     }
     
+    
+    &-title{
+        text-align: center;
+        margin-top: 1em;
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+    &-table{
+
+    }
+}
+.cv-image{
+    display: block;
+    width: 780px;
 }
 em{
     font-weight: bold;
     color: #1a5f29
 }
 
-@keyframes slideinabout {
+table{
+    border: solid 1px #333333;
+    display: block;
+    
+}
+tbody {
+    background-color: #333333;
+    color: #FEDAA8;
+}
+
+td {
+    text-align: center;
+    font-style: italic;
+    padding: 0.5em;
+}
+.table-link{
+    color:#FEDAA8;
+}
+@keyframes slidein {
     from {
-        margin-left: 100%;
-        width: 300%;
+        margin-top: 100%;
+        
+        
     }
     50%{
-        margin-left: -40%;
-        width: 100%;
+        margin-top: 0%;
+        
+        
     }
     to{
-        margin-left: 0%;
-        width: 100%;
+        margin-top: 1em;
+        
+        
     }
 }
 
-@keyframes slideinbefore {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-    50%{
-        margin-left: -29%;
-        width: 100%;
-    }
-    to{
-        margin-left: 0%;
-        width: 100%;
-    }
-}

@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { FaIndustry, FaProjectDiagram, FaUserAstronaut } from "react-icons/fa";
+import { MdComputer } from "react-icons/md";
+import { GiMedallist, GiMonaLisa } from "react-icons/gi";
+import { TiContacts } from "react-icons/ti";
 import './style.scss';
 import About from '../About';
 import Before from '../Before';
@@ -39,7 +42,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                              setButtonObject({...buttonObject,about:true})
                         }}
-                        >Qui suis-je ?
+                        ><FaUserAstronaut /> Qui suis-je ?
                     </button>
                     
                         
@@ -60,7 +63,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,before:true})
                         }}
-                        >Avant d'être développeur</button>
+                        ><FaIndustry /> Avant d'être développeur</button>
                         
                     </li>
                 <li className="nav-li">
@@ -79,7 +82,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,training:true})
                         }}
-                        >Ma formation de développeur</button>
+                        ><MdComputer /> Ma formation de développeur</button>
                         
                     </li>
                 <li className="nav-li">
@@ -98,7 +101,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,now:true})
                         }}
-                        >Et maintenant ? </button>
+                        ><GiMedallist /> Et maintenant ? </button>
                         
                     </li>
                 <li className="nav-li">
@@ -117,7 +120,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,cv:true})
                         }}
-                        >Mon CV </button>
+                        ><GiMonaLisa /> Mon CV </button>
                         
                     </li>
                 <li className="nav-li">
@@ -136,7 +139,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,projects:true})
                         }}
-                        >Projets / Réalisations </button>
+                        ><FaProjectDiagram /> Projets / Réalisations </button>
                         
                     </li>
                 <li className="nav-li">
@@ -155,7 +158,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
                             });
                             setButtonObject({...buttonObject,contact:true})
                         }}
-                        >Me contacter </button>
+                        ><TiContacts /> Me contacter </button>
                         
                     </li>
                 
