@@ -9,8 +9,7 @@ const Projects=() => {
             <h1 className="content-title">
                 <FaProjectDiagram /> Projets / Réalisations <FaProjectDiagram /> 
             </h1>
-            <hr></hr>
-            <div className="content-text">
+            <div className="content-text-scroll">
                 <p >
                     Il y a beaucoup de projets à réaliser. En fait, ce sont plutôt des idées de développement que de réels projets. Le but est principalement de travailler "mes acquis" (API REST, Login...) tout en testant de nouvelles fonctionnalités (paiement en ligne).
                     L'objectif est aussi de traiter ces différents sujets depuis la conception jusqu'à la mise en ligne.
@@ -157,14 +156,11 @@ const Projects=() => {
                         </tr>
                         
                     </tbody>
-                    <tfoot>
-                        <th>Nombre de projets :</th>
-                        <td>17</td>
-                        <th>Nombre de réalisation :</th>
-                        <td>0</td>
-                    </tfoot>
-
                 </table>
+                <p>
+                    Nombre de projets: 17 - Nombre de réalisation: 0
+                </p>
+                
             </div>
         </div>
     );

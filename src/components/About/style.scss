@@ -12,15 +12,17 @@
     
         
     
-    &-text{
+    &-text-scroll{
         animation-duration: 3s;
         animation-name: slidein;
         overflow-y: scroll;
         scroll-behavior: smooth;
-        
-       
         height: 600px;
-
+    }
+    &-text{
+        animation-duration: 3s;
+        animation-name: slidein;
+        height: 600px;
     }
     
     
@@ -30,9 +32,7 @@
         animation-duration: 3s;
         animation-name: slidein;
     }
-    &-table{
 
-    }
 }
 .cv-image{
     display: block;
@@ -58,6 +58,7 @@ td {
     font-style: italic;
     padding: 0.5em;
 }
+
 .table-link{
     color:#FEDAA8;
 }

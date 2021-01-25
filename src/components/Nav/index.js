@@ -169,7 +169,7 @@ const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
             {navObject.now && <Now /> }
             {navObject.cv && <CV /> }
             {navObject.projects && <Projects /> }
-            {navObject.contact && <Contact /> }
+            {navObject.contact && <Contact setNavObject={setNavObject} /> }
         </div>
     );
 }

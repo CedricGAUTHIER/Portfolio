@@ -12,7 +12,7 @@ const CV=() => {
                 <GiMonaLisa /> Mon CV <GiMonaLisa /> 
             </h1>
             <hr></hr>
-            <div className="content-text">
+            <div className="content-text-scroll">
                 <p>
                     N'hésitez pas à me contacter pour obtenir le CV en format pdf (rubrique <em> <TiContacts /> Me contacter</em>)
                 </p>

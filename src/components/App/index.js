@@ -26,6 +26,7 @@ const App=() => {
         contact: false
     });
     
+    
     return (
         <div className="app">
             <Particles className="particles" options={particlesOptions}/>
@@ -36,6 +37,7 @@ const App=() => {
                 setNavObject={setNavObject}
                 buttonObject={buttonObject}
                 setButtonObject={setButtonObject}
+                
             />
         </div>
     );

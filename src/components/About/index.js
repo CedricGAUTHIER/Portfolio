@@ -28,7 +28,7 @@ const About=() => {
                 <FaUserAstronaut /> Qui suis-je ? <FaUserAstronaut />
             </h1>
             <hr></hr>
-            <div className="content-text">  
+            <div className="content-text-scroll">  
                 <p>
                     C’est un peu mégalo de commencer comme cela.    
                 </p>

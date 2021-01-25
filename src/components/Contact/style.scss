@@ -1,10 +1,144 @@
-.contact{
+.content{
+    position: absolute;
+    right: 100px;
     background-color: #FEDAA8;
     color: #333333;
     border-radius: 10px;
-    width: 63%;
+    max-width: 63%;
+    padding: 0.5em;
+    margin-top: 1em;
+    height: 700px;
+    border: solid 2px #FEDAA8;
+    
+        
+    
+    &-text-scroll{
+        animation-duration: 3s;
+        animation-name: slidein;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        height: 600px;
+    }
+    &-text{
+        animation-duration: 3s;
+        animation-name: slidein;
+        height: 600px;
+    }
+    
+    
+    &-title{
+        text-align: center;
+        margin-top: 1em;
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+
+}
+.cv-image{
+    display: block;
+    width: 780px;
+}
+em{
+    font-weight: bold;
+    color: #1a5f29
+}
+
+table{
+    border: solid 1px #333333;
+    display: block;
+    
+}
+tbody {
+    background-color: #333333;
+    color: #FEDAA8;
+}
+
+td {
+    text-align: center;
+    font-style: italic;
+    padding: 0.5em;
+}
+
+.table-link{
+    color:#FEDAA8;
+}
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        
+        
+    }
+    50%{
+        margin-top: 0%;
+        
+        
+    }
+    to{
+        margin-top: 1em;
+        
+        
+    }
+}
+fieldset{
+    background-color: rgb(250, 195, 118);
+    color: #333333;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 1em;  
+}
+
+input, textarea{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+textarea{
+    width: 486px;
+    height: 240px;
+}
+
+
+.form{
+    background-color: rgb(250, 195, 118);
+    color: #333333;
+    border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
     
+}
+.field-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.field-send{
+    text-align: center;
     
 }
+.send{
+    background-color: #333333;
+    color: #FEDAA8;
+    font-weight: bold;
+    padding: 0.3em 0.5em;
+    border: none;
+    border-radius: 15px;
+}
+.send:hover{
+    background-color: #FEDAA8;
+    color: #333333;
+    border: solid #333333 2px;
+}
+
+.required{
+    margin-left: 0.2em;
+    color: red;
+    font-size: 1.5em;
+}
+
+.alert{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
