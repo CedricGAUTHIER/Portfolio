@@ -13,12 +13,13 @@ const Now=() => {
             <div className="content-text">
                 <p>
                     Et maintenant, <strong>on continue :</strong> 
-                    <ul>
-                        <li>Finaliser ce portfolio.</li>
-                        <li>Se mettre sérieusement sur des projets persos.</li>
-                        <li>Trouver un job rapidement.</li>
-                    </ul>    
                 </p>
+                <ul>
+                    <li>Finaliser ce portfolio.</li>
+                    <li>Se mettre sérieusement sur des projets persos.</li>
+                    <li>Trouver un job rapidement.</li>
+                </ul>    
+                
                 
                 
                 <hr></hr>

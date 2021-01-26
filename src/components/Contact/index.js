@@ -4,7 +4,7 @@ import { TiContacts } from "react-icons/ti";
 import * as emailjs from "emailjs-com";
 
 
-const Contact=({setNavObject}) => {
+const Contact=({setItemsObject}) => {
     const handleSubmit=({firstname, lastname, email, company, message})=>{
         console.log("firstname",firstname.value);
         console.log("lastname",lastname.value);
@@ -28,7 +28,7 @@ const Contact=({setNavObject}) => {
              console.log('FIRE EMAIL FAILED...', err);
           });
         
-          setNavObject({contact:false});
+          setItemsObject({contact:false});
         
     }
     return (

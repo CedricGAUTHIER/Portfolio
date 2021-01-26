@@ -13,165 +13,112 @@ import Projects from '../Projects';
 import Contact from '../Contact';
 
 
-const Nav=({navObject, setNavObject, buttonObject, setButtonObject}) => {
-    const ClassAbout= buttonObject.about ? "nav-button-visited" : "nav-button";
-    const ClassBefore= buttonObject.before ? "nav-button-visited" : "nav-button";
-    const ClassTraining= buttonObject.training ? "nav-button-visited" : "nav-button";
-    const ClassNow= buttonObject.now ? "nav-button-visited" : "nav-button";
-    const ClassCV= buttonObject.cv ? "nav-button-visited" : "nav-button";
-    const ClassProjects= buttonObject.projects ? "nav-button-visited" : "nav-button";
-    const ClassContact= buttonObject.contact ? "nav-button-visited" : "nav-button";
+const Nav=({ itemsOpenedObject, setItemsOpenedObject,itemsVisitedObject, setItemsVisitedObject }) => {
+    const items=Object.keys(itemsOpenedObject);
+    let liParams = {};
+    let itemsFalse = {}
+    items.forEach(item => {
+        itemsFalse={
+            ...itemsFalse,
+            [item]:false
+        }
+        liParams={
+            ...liParams,
+            [item]:{class:'', label:''}
+        }
+        
+        liParams[item].class = itemsVisitedObject[item] ? "nav-button-visited" : "nav-button";
+        switch (item) {
+            case 'About':
+                liParams[item].label = "Qui suis-je ?";
+                break;
+            case 'Before':
+                liParams[item].label = "Avant d'être développeur";
+                break;
+            case 'Training':
+                liParams[item].label = "Ma formation de développeur";
+                break;
+            case 'Now':
+                liParams[item].label = "Et maintenant ?";
+                break; 
+            case 'CV':
+                liParams[item].label = "Mon CV";
+                break;
+            case 'Projects':
+                liParams[item].label = "Projets / Réalisations";
+                break;
+            case 'Contact':
+                liParams[item].label = "Me contacter";
+                break;
+            default:
+                break;
+        }
+        
+        
+
+    }); 
+    
+    
         return (
         
         <div className="nav">
             
             <ul className="nav-ul">
-                <li className="nav-li">
-                    
-                    <button
-                        className={ClassAbout}
-                        onClick={()=>{
-                            setNavObject({
-                                about: !navObject.about,
-                                before: false,
-                                training: false,
-                                now: false,
-                                cv: false,
-                                projects:false,
-                                contact: false
-                            });
-                             setButtonObject({...buttonObject,about:true})
-                        }}
-                        ><FaUserAstronaut /> Qui suis-je ?
-                    </button>
-                    
-                        
-                </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassBefore}
-                        onClick={()=>{
+                {items.map((item) => {
+                    return(
+                        <li key={item} className="nav-li">
+                            <button
+                                className={liParams[item].class}
+                                name={item}
+                                onClick={(evt)=>{
+                                    
+                                    setItemsOpenedObject(
+                                        {...itemsFalse,[item]: !itemsOpenedObject[item],}
+                                        
+                                    );
+                                    setItemsVisitedObject(
+                                        {...itemsVisitedObject, [item]:true}
+                                    )
+                                        
+                             
+                            }}
+                            >
+                            {(item==="About") && <FaUserAstronaut /> }
+                            {(item==="Before") && <FaIndustry /> }
+                            {(item==="Training") && <MdComputer /> }
+                            {(item==="Now") && <GiMedallist /> }
+                            {(item==="CV") && <GiMonaLisa /> }
+                            {(item==="Projects") && <FaProjectDiagram /> }
+                            {(item==="Contact") && <TiContacts /> }
                             
-                            setNavObject({
-                                about: false,
-                                before: !navObject.before,
-                                training: false,
-                                now: false,
-                                cv: false,
-                                projects:false,
-                                contact: false
-                            });
-                            setButtonObject({...buttonObject,before:true})
-                        }}
-                        ><FaIndustry /> Avant d'être développeur</button>
-                        
-                    </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassTraining}
-                        onClick={()=>{
                             
-                            setNavObject({
-                                about: false,
-                                before: false,
-                                training: !navObject.training,
-                                now: false,
-                                cv: false,
-                                projects:false,
-                                contact: false
-                            });
-                            setButtonObject({...buttonObject,training:true})
-                        }}
-                        ><MdComputer /> Ma formation de développeur</button>
-                        
-                    </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassNow}
-                        onClick={()=>{
-                            
-                            setNavObject({
-                                about: false,
-                                before: false,
-                                training: false,
-                                now: !navObject.now,
-                                cv: false,
-                                projects:false,
-                                contact: false
-                            });
-                            setButtonObject({...buttonObject,now:true})
-                        }}
-                        ><GiMedallist /> Et maintenant ? </button>
-                        
-                    </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassCV}
-                        onClick={()=>{
-                            
-                            setNavObject({
-                                about: false,
-                                before: false,
-                                training: false,
-                                now: false,
-                                cv: !navObject.cv,
-                                projects:false,
-                                contact: false
-                            });
-                            setButtonObject({...buttonObject,cv:true})
-                        }}
-                        ><GiMonaLisa /> Mon CV </button>
-                        
-                    </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassProjects}
-                        onClick={()=>{
-                            
-                            setNavObject({
-                                about: false,
-                                before: false,
-                                training: false,
-                                now: false,
-                                cv: false,
-                                projects:!navObject.projects,
-                                contact: false
-                            });
-                            setButtonObject({...buttonObject,projects:true})
-                        }}
-                        ><FaProjectDiagram /> Projets / Réalisations </button>
-                        
-                    </li>
-                <li className="nav-li">
-                    <button
-                        className={ClassContact}
-                        onClick={()=>{
-                            
-                            setNavObject({
-                                about: false,
-                                before: false,
-                                training: false,
-                                now: false,
-                                cv: false,
-                                projects:false,
-                                contact: !navObject.contact
-                            });
-                            setButtonObject({...buttonObject,contact:true})
-                        }}
-                        ><TiContacts /> Me contacter </button>
-                        
-                    </li>
+                            {liParams[item].label}
+                            </button>
+                        </li>
+                    )
+                })}
+                
+                
+                
+                
+                
+                
+                
+                
                 
             </ul>
-            {navObject.about && <About /> }
-            {navObject.before && <Before /> }
-            {navObject.training && <Training /> }
-            {navObject.now && <Now /> }
-            {navObject.cv && <CV /> }
-            {navObject.projects && <Projects /> }
-            {navObject.contact && <Contact setNavObject={setNavObject} /> }
+            
+            
+            {itemsOpenedObject.About && <About /> }
+            {itemsOpenedObject.Before && <Before /> }
+            {itemsOpenedObject.Training && <Training /> }
+            {itemsOpenedObject.Now && <Now /> }
+            {itemsOpenedObject.CV && <CV /> }
+            {itemsOpenedObject.Projects && <Projects /> }
+            {itemsOpenedObject.Contact && <Contact setItemsObject={setItemsOpenedObject} /> }
         </div>
     );
 }
 
 export default Nav;
+
