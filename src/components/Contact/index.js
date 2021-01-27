@@ -7,6 +7,9 @@ import * as emailjs from "emailjs-com";
 const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSending, setMessageSending}) => {
     
     const handleSubmit=({firstname, lastname, email, company, message, checkboxcv })=>{
+        const serviceId = 'service_8bo9x68';
+        const templateId = 'template_t6likdi';
+        const userId = 'user_NtiPFI8UxjU8Eb9IstYyn';
         const sendCV = checkboxcv.checked ? `Envoyer le CV par mail à ${email.value}`:`Pas besoin de CV`
         const templateParams= {
             from_name: `${firstname.value} ${lastname.value}`,
@@ -15,15 +18,17 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
             message: message.value,
             sendCV,
         }
-        
-        emailjs.send('service_8bo9x68', 'template_t6likdi', templateParams, 'user_NtiPFI8UxjU8Eb9IstYyn')
+        console.log('service_ID',serviceId);
+        console.log('template_ID',templateId);
+        console.log('user_ID',userId);
+        emailjs.send(serviceId, templateId, templateParams, userId)
         .then((resp) => {
-            setMessageSending(true);
+            
             console.log('SENDING EMAIL: SUCCESS!', resp.status, resp.text);
             alert("Le message a été envoyé");
 
         }, (err) => {
-            setMessageSending(false)
+            
             console.log('SENDING EMAIL: FAILED...', err);
             alert("Erreur lors de l'envoi du message. Le message n'a pas été envoyé")
 
