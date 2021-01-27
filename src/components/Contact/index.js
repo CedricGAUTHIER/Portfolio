@@ -4,7 +4,8 @@ import { TiContacts } from "react-icons/ti";
 import * as emailjs from "emailjs-com";
 
 
-const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse}) => {
+const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSending, setMessageSending}) => {
+    
     const handleSubmit=({firstname, lastname, email, company, message, checkboxcv })=>{
         const sendCV = checkboxcv.checked ? `Envoyer le CV par mail à ${email.value}`:`Pas besoin de CV`
         const templateParams= {
@@ -17,16 +18,22 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse}) => {
         
         emailjs.send('service_8bo9x68', 'template_t6likdi', templateParams, 'user_NtiPFI8UxjU8Eb9IstYyn')
         .then((resp) => {
-            // successCallback();
+            setMessageSending(true);
             console.log('SENDING EMAIL: SUCCESS!', resp.status, resp.text);
+            alert("Le message a été envoyé");
+
         }, (err) => {
-            // failureCallback();
+            setMessageSending(false)
             console.log('SENDING EMAIL: FAILED...', err);
+            alert("Erreur lors de l'envoi du message. Le message n'a pas été envoyé")
+
         });
-            setItemsOpenedObject(
-            {...itemsFalse,Contact: !itemsOpenedObject.Contact,}
             
-        );
+            setItemsOpenedObject({...itemsFalse, Contact: !itemsOpenedObject.Contact,});
+            
+
+            
+        
         
     }
     return (

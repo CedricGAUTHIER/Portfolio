@@ -17,6 +17,7 @@
         padding: 0.3em 0.5em;
         border: none;
         border-radius: 15px;
+        transition: all 1s ease-out;
         &-visited{
             color: #333333;
             font-weight: bold;
@@ -25,6 +26,7 @@
             border: none;
             border-radius: 15px;
             background-color: rgb(241, 175, 82);
+            transition: all 1s ease-out;
         }
     }
     &-button:hover{

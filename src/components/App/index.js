@@ -24,6 +24,7 @@ const App=() => {
                 itemsVisitedObject={itemsVisitedObject}
                 setItemsVisitedObject={setItemsVisitedObject}
                 
+                
             />
         </div>
     );
