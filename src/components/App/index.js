@@ -6,7 +6,7 @@ import { itemsOpened , itemsVisited }  from "../../datas";
 import Header from "../Header";
 import Main from "../Main";
 import Nav from "../Nav";
-console.log("itemsOpened", itemsOpened, itemsVisited);
+
 const App=() => {
     const [itemsOpenedObject,setItemsOpenedObject]=useState(itemsOpened);
     const [itemsVisitedObject,setItemsVisitedObject]=useState(itemsVisited);

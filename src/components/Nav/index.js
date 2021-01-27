@@ -30,25 +30,25 @@ const Nav=({ itemsOpenedObject, setItemsOpenedObject,itemsVisitedObject, setItem
         liParams[item].class = itemsVisitedObject[item] ? "nav-button-visited" : "nav-button";
         switch (item) {
             case 'About':
-                liParams[item].label = "Qui suis-je ?";
+                liParams[item].label = " Qui suis-je ?";
                 break;
             case 'Before':
-                liParams[item].label = "Avant d'être développeur";
+                liParams[item].label = " Avant d'être développeur";
                 break;
             case 'Training':
-                liParams[item].label = "Ma formation de développeur";
+                liParams[item].label = " Ma formation de développeur";
                 break;
             case 'Now':
-                liParams[item].label = "Et maintenant ?";
+                liParams[item].label = " Et maintenant ?";
                 break; 
             case 'CV':
-                liParams[item].label = "Mon CV";
+                liParams[item].label = " Mon CV";
                 break;
             case 'Projects':
-                liParams[item].label = "Projets / Réalisations";
+                liParams[item].label = " Projets / Réalisations";
                 break;
             case 'Contact':
-                liParams[item].label = "Me contacter";
+                liParams[item].label = " Me contacter";
                 break;
             default:
                 break;
@@ -92,7 +92,7 @@ const Nav=({ itemsOpenedObject, setItemsOpenedObject,itemsVisitedObject, setItem
                             {(item==="Contact") && <TiContacts /> }
                             
                             
-                            {liParams[item].label}
+                             {liParams[item].label}
                             </button>
                         </li>
                     )
@@ -115,7 +115,7 @@ const Nav=({ itemsOpenedObject, setItemsOpenedObject,itemsVisitedObject, setItem
             {itemsOpenedObject.Now && <Now /> }
             {itemsOpenedObject.CV && <CV /> }
             {itemsOpenedObject.Projects && <Projects /> }
-            {itemsOpenedObject.Contact && <Contact setItemsObject={setItemsOpenedObject} /> }
+            {itemsOpenedObject.Contact && <Contact itemsOpenedObject={itemsOpenedObject} setItemsOpenedObject={setItemsOpenedObject} itemsFalse={itemsFalse} /> }
         </div>
     );
 }
