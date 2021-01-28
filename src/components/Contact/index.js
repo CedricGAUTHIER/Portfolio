@@ -8,8 +8,8 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
     
     const handleSubmit=({firstname, lastname, email, company, message, checkboxcv })=>{
         const serviceId = process.env.REACT_APP_SERVICE_ID
-        const templateId = process.env.REACT_APP_TEMPLATE_ID;
-        const userId = process.env.REACT_APP_USER_ID;
+        const templateId =process.env.REACT_APP_TEMPLATE_ID;
+        const userId =process.env.REACT_APP_USER_ID;
         const sendCV = checkboxcv.checked ? `Envoyer le CV par mail à ${email.value}`:`Pas besoin de CV`
         const templateParams= {
             from_name: `${firstname.value} ${lastname.value}`,
