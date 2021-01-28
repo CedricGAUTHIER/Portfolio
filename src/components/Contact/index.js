@@ -7,9 +7,9 @@ import * as emailjs from "emailjs-com";
 const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSending, setMessageSending}) => {
     
     const handleSubmit=({firstname, lastname, email, company, message, checkboxcv })=>{
-        const serviceId = 'service_8bo9x68';
-        const templateId = 'template_t6likdi';
-        const userId = 'user_NtiPFI8UxjU8Eb9IstYyn';
+        const serviceId = process.env.REACT_APP_SERVICE_ID
+        const templateId = process.env.REACT_APP_TEMPLATE_ID;
+        const userId = process.env.REACT_APP_USER_ID;
         const sendCV = checkboxcv.checked ? `Envoyer le CV par mail à ${email.value}`:`Pas besoin de CV`
         const templateParams= {
             from_name: `${firstname.value} ${lastname.value}`,
@@ -18,9 +18,7 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
             message: message.value,
             sendCV,
         }
-        console.log('service_ID',serviceId);
-        console.log('template_ID',templateId);
-        console.log('user_ID',userId);
+        
         emailjs.send(serviceId, templateId, templateParams, userId)
         .then((resp) => {
             
