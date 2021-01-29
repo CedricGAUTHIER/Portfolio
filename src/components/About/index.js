@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './about.scss';
 import { FaUserAstronaut, FaSnowplow, FaIndustry, FaBroom } from "react-icons/fa";
 import { GiMountaintop } from "react-icons/gi";
 import { TiBusinessCard, TiContacts } from "react-icons/ti";
@@ -7,18 +7,7 @@ import { BsArrowRepeat } from "react-icons/bs";
 import { MdComputer } from "react-icons/md";
 import { GoRocket } from "react-icons/go";
 import { RiSurgicalMaskLine } from "react-icons/ri"
-// Qui suis-je ? SiAboutDotMe => import { SiAboutDotMe } from "react-icons/si";
-// balai: FaBroom => import { FaBroom, FaIndustry, FaProjectDiagram, FaGlasses, FaSnowplow} from "react-icons/fa";
-// before: FaIndustry
-// training: MdComputer => import { MdComputer } from "react-icons/md";
-// Now: GiMedalList => import { GiMedalList, GiMonaLisa, GiMountaintop } from "react-icons/gi";
-// CV: GiMonaLisa
-// Projets: FaProjectDiagram
-// contact: TiContacts => import { TiContacts } from "react-icons/ti";
-// Lunettes: FaGlasses
-// Fusée: GoRocket => import { GoRocket } from "react-icons/go";
-// Montagne: GiMountaintop
-// Neige lourde: FaSnowplow
+
 
 
 const About=() => {

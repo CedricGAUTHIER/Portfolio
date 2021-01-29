@@ -1,6 +1,7 @@
 import React from 'react';
-import './style.scss';
+import './contact.scss';
 import { TiContacts } from "react-icons/ti";
+import { AiFillLinkedin } from "react-icons/ai";
 import * as emailjs from "emailjs-com";
 
 
@@ -45,7 +46,16 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
             <TiContacts /> Me contacter <TiContacts /> 
             </h1>
             <hr></hr>
-            <div className="content-text">
+            <p>
+                <AiFillLinkedin />
+                Linkedin : 
+                <a href="https://www.linkedin.com/in/cedric-gauthier/">
+                    https://www.linkedin.com/in/cedric-gauthier/
+                </a>
+            </p>
+            
+            <hr></hr>
+            <div className="content-text-scroll">
                 <form onSubmit={(evt)=>{
                     evt.preventDefault();
                     handleSubmit(evt.target);
@@ -53,46 +63,65 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
                 }>
                     <div className="form">
                         <fieldset>
-                            <div className="field-name">
-                                <div>
-                                    <label htmlFor="firstName">
-                                        Prénom
-                                        <span className="required">
-                                            *
-                                        </span>
-                                    </label>
-                                    <input className="firstName" type="text" name="firstname" placeholder="Prénom" required></input>
+                            <div className="fields">
+                                <div className="field">
+                                    <div className="field-label">
+                                        <label htmlFor="firstName">
+                                            Prénom
+                                            <span className="required">
+                                                *
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div className="field-input">
+                                        <input className="firstName" type="text" name="firstname" placeholder="Prénom" required></input>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="lastName">
-                                        Nom
-                                        <span className="required">
-                                            *
-                                        </span>
-                                    </label>
-                                    <input className="lastName"type="text" name="lastname" placeholder="Nom" required></input>
+                                <div className="field">
+                                    <div className="field-label">
+                                        <label htmlFor="lastName">
+                                            Nom
+                                            <span className="required">
+                                                *
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div className="field-input">
+                                        <input className="lastName"type="text" name="lastname" placeholder="Nom" required></input>
+                                    </div>
+                                </div>
+                            
+                        
+                            
+                                <div className="field">
+                                    <div className="field-label">
+                                        <label htmlFor="email">
+                                            E - mail
+                                            <span className="required">
+                                                *
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div className="field-input">
+                                        <input className="email" type="email" name="email" placeholder="E-mail (pour la réponse)" required></input>
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <div className="field-label">
+                                        <label htmlFor="lastName">Société</label>
+                                    </div>
+                                    <div className="field-input">
+                                        <input className="company" type="text" name="company" placeholder="Société"></input>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div className="field-name">
-                                <div>
-                                    <label htmlFor="firstName">
-                                        E - mail
-                                        <span className="required">
-                                            *
-                                        </span>
-                                    </label>
-                                    <input className="email" type="email" name="email" placeholder="E-mail (pour la réponse)" required></input>
-                                </div>
-                                <div>
-                                    <label htmlFor="lastName">Société</label>
-                                    <input className="company" type="text" name="company" placeholder="Société"></input>
+                            <div className="container-message">
+                                <div className="message">
+                                    <textarea   name="message" placeholder="Votre message" required></textarea>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset>
-                            <textarea className="message" name="message" placeholder="Votre message" required></textarea>
                         </fieldset>    
                         <fieldset>
                             <input className="checkboxcv" type="checkbox" name="checkboxcv" value="sendCV"></input>

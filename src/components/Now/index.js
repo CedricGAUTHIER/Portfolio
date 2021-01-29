@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/style.scss';
+import './now.scss';
 import { GiMedallist } from "react-icons/gi";
 import { TiContacts } from "react-icons/ti";
 const Now=() => {
@@ -10,7 +10,7 @@ const Now=() => {
                 <GiMedallist /> Et maintenant ? <GiMedallist /> 
             </h1>
             <hr></hr>
-            <div className="content-text">
+            <div className="content-text-scroll">
                 <p>
                     Et maintenant, <strong>on continue :</strong> 
                 </p>

@@ -1,17 +1,14 @@
 .content{
-    position: absolute;
-    right: 100px;
+    margin: auto;
     background-color: #FEDAA8;
     color: #333333;
     border-radius: 10px;
-    max-width: 63%;
+    max-width: 100%;
     padding: 0.5em;
     margin-top: 1em;
-    height: 700px;
+    max-height: 100%;
     border: solid 2px #FEDAA8;
     font-family: 'Spartan', sans-serif;
-        
-    
     &-text-scroll{
         animation-duration: 3s;
         animation-name: slidein;
@@ -19,13 +16,6 @@
         scroll-behavior: smooth;
         height: 600px;
     }
-    &-text{
-        animation-duration: 3s;
-        animation-name: slidein;
-        height: 600px;
-    }
-    
-    
     &-title{
         text-align: center;
         margin-top: 1em;
@@ -34,34 +24,13 @@
     }
 
 }
-.cv-image{
-    display: block;
-    width: 780px;
-}
+
 em{
     font-weight: bold;
     color: #1a5f29
 }
 
-table{
-    border: solid 1px #333333;
-    display: block;
-    
-}
-tbody {
-    background-color: #333333;
-    color: #FEDAA8;
-}
 
-td {
-    text-align: center;
-    font-style: italic;
-    padding: 0.5em;
-}
-
-.table-link{
-    color:#FEDAA8;
-}
 @keyframes slidein {
     from {
         margin-top: 100%;

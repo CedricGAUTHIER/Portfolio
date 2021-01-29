@@ -6,7 +6,7 @@ const Header=() => {
     return (
         <div className="header">
             <div className="header-title">
-                    PORTFOLIO Cédric GAUTHIER
+                    PORTFOLIO Cédric GAUTHIER 
             </div>
             <div className="header-section">
                 <p>

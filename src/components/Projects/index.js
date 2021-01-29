@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './projects.scss';
 import { FaProjectDiagram, FaRegWindowClose } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
 const Projects=() => {

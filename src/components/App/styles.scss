@@ -1,8 +1,46 @@
+body{
+    background-color: #333333;
+}
+canvas{
+    display: block;
+}
 .app{
     color: #FEDAA8;
-    height: 100vh;
+    
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    
+    &-particles{
+        
+        
+        width:100%;
+    }
+    &-header{
+        max-width: 100%;
+
+    }
+    &-main{
+        max-width: 80%;
+    }
+    &-nav{
+        max-width: 100%;
+        
+
+    } 
     
 }
-.particles{
-    height: 260%;
+
+#tsparticles{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
+
+
+

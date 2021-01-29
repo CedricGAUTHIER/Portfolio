@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/style.scss';
+import './before.scss';
 import { FaIndustry,FaQuestion, FaThumbsUp } from "react-icons/fa";
 import { BiCameraHome } from "react-icons/bi";
 import { GoRocket } from "react-icons/go";
@@ -11,7 +11,7 @@ const Before=() => {
                 <FaIndustry /> Avant d'être développeur <FaIndustry /> 
             </h1>
             <hr></hr>
-            <div className="content-text">
+            <div className="content-text-scroll">
                 <p>
                     J’ai un BAC S options Physique / Chimie.
                 </p>
