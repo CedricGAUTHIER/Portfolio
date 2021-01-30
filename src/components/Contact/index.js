@@ -16,6 +16,7 @@ const Contact=({ itemsOpenedObject, setItemsOpenedObject,itemsFalse, messageSend
             from_name: `${firstname.value} ${lastname.value}`,
             from_company: company.value,
             to_name: `Portfolio`,
+            email: email.value,
             message: message.value,
             sendCV,
         }
