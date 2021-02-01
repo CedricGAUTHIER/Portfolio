@@ -3,10 +3,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![](docs/WIP-588_RdB.svg)
+![](docs/Portfolio.svg)
 
 Finally, and because it is essential: my **portfolio**, a presentation of my background, my projects and my achievements
 
+Project online : [588dev.org](http://588dev.org/)
 ### Built With
 
 * 🖊️ Markdown

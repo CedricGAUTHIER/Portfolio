@@ -15,7 +15,7 @@ const Now=() => {
                     Et maintenant, <strong>on continue :</strong> 
                 </p>
                 <ul>
-                    <li>Finaliser ce portfolio.</li>
+                    <li className="done">Finaliser ce portfolio.</li>
                     <li>Se mettre sérieusement sur des projets persos.</li>
                     <li>Trouver un job rapidement.</li>
                 </ul>    
