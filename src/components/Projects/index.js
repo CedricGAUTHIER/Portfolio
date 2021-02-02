@@ -40,7 +40,7 @@ const Projects=() => {
                             <td > Ce portfolio </td>
                             <td > En ligne </td>
                             <td > <a className="table-link"href="https://github.com/CedricGAUTHIER/Portfolio" target="_blank" rel="noopener noreferrer">lien Github</a> </td>
-                            <td > <a className="table-link"href="http://588dev.org/" target="_blank" rel="noopener noreferrer">588dev.org</a> </td>
+                            <td > <a className="table-link"href="http://cgauthier.portfolio.588dev.org/" target="_blank" rel="noopener noreferrer">cgauthier.portfolio.588dev.org</a> </td>
                         </tr>
                         <tr>
                             <td > transport-de-fret </td> 
