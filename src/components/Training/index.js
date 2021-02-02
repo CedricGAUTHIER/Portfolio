@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/style.scss';
+import './training.scss';
 import { MdComputer } from "react-icons/md";
 import { GiCakeSlice } from "react-icons/gi";
 import { GrCloudComputer } from "react-icons/gr";
@@ -14,7 +14,7 @@ const Training=() => {
                 <MdComputer /> Ma formation de développeur <MdComputer />
             </h1>
             <hr></hr>
-            <div className="content-text">
+            <div className="content-text-scroll">
                 <p>
                     J’ai suivi une formation de développeur Fullstack Javascript <GiCakeSlice /> (<a href="https://oclock.io/formations/developpeur-web-fullstack-javascript" target="_blank" rel="noopener noreferrer">le programme </a>):
                 </p>

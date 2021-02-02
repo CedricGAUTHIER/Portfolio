@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './projects.scss';
 import { FaProjectDiagram, FaRegWindowClose } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
 const Projects=() => {
@@ -38,9 +38,9 @@ const Projects=() => {
                         <tr>
                             <td > Portfolio </td> 
                             <td > Ce portfolio </td>
-                            <td > En cours </td>
+                            <td > En ligne </td>
                             <td > <a className="table-link"href="https://github.com/CedricGAUTHIER/Portfolio" target="_blank" rel="noopener noreferrer">lien Github</a> </td>
-                            <td > <FaRegWindowClose /> </td>
+                            <td > <a className="table-link"href="http://588dev.org/" target="_blank" rel="noopener noreferrer">588dev.org</a> </td>
                         </tr>
                         <tr>
                             <td > transport-de-fret </td> 
@@ -52,7 +52,7 @@ const Projects=() => {
                         <tr>
                             <td > 588_Videos </td> 
                             <td > Gestion d'une vidéothèque </td>
-                            <td > <FaRegWindowClose /> </td>
+                            <td > En cours </td>
                             <td > <FaRegWindowClose /> </td>
                             <td > <FaRegWindowClose /> </td>
                         </tr>
@@ -158,7 +158,7 @@ const Projects=() => {
                     </tbody>
                 </table>
                 <p>
-                    Nombre de projets: 17 - Nombre de réalisation: 0
+                    Nombre de projets: 17 - Nombre de réalisations: 1
                 </p>
                 
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/style.scss';
+import './cv.scss';
 import { GiMonaLisa } from "react-icons/gi";
 import cv from "../../assets/images/CV_CedricGAUTHIER_WebDev.svg"
 import { TiContacts } from "react-icons/ti";

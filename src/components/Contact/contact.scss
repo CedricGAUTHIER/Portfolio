@@ -1,15 +1,15 @@
 .content{
-    position: absolute;
-    right: 100px;
+    
+    margin: auto;
     background-color: #FEDAA8;
     color: #333333;
     border-radius: 10px;
-    max-width: 63%;
+    max-width: 100%;
     padding: 0.5em;
     margin-top: 1em;
-    height: 700px;
+    max-height: 100%;
     border: solid 2px #FEDAA8;
-    
+    font-family: 'Spartan', sans-serif;
         
     
     &-text-scroll{
@@ -34,34 +34,13 @@
     }
 
 }
-.cv-image{
-    display: block;
-    width: 780px;
-}
+
 em{
     font-weight: bold;
     color: #1a5f29
 }
 
-table{
-    border: solid 1px #333333;
-    display: block;
-    
-}
-tbody {
-    background-color: #333333;
-    color: #FEDAA8;
-}
 
-td {
-    text-align: center;
-    font-style: italic;
-    padding: 0.5em;
-}
-
-.table-link{
-    color:#FEDAA8;
-}
 @keyframes slidein {
     from {
         margin-top: 100%;
@@ -83,8 +62,8 @@ fieldset{
     background-color: rgb(250, 195, 118);
     color: #333333;
     border-radius: 10px;
-    padding: 0.5em;
-    margin-top: 0.5em;  
+    margin-top: 0.5em;
+    max-width: 97%;  
 }
 
 input, textarea{
@@ -92,11 +71,18 @@ input, textarea{
     padding: 0.5em;
     border-radius: 10px;
 }
-textarea{
-    width: 486px;
-    height: 240px;
-}
 
+
+textarea{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+    margin: auto;
+    
+    
+}
 
 .form{
     background-color: rgb(250, 195, 118);
@@ -104,14 +90,19 @@ textarea{
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
+    max-width: 100%;
     
 }
-.field-name{
+.fields{
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+
 }
+
 .field-send{
     text-align: center;
     
@@ -142,3 +133,25 @@ textarea{
     font-style: italic;
 }
 
+@media screen and (min-width: 700px){
+        
+        &-fields{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            
+        }
+        &-field{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: row;
+            max-width: 100%;
+            &-label{
+                text-align: center;
+            }
+        }
+    }

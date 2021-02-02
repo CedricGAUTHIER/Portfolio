@@ -1,50 +1,122 @@
+
 .main{
     display: flex;
     background-color:  #FEDAA8;
-    position: absolute;
-    top: 40%;
-    left:10%;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    max-width: 90%;
+    min-width: 57vw;
     color: #333333;
     border-radius: 10px;
     padding: 1em;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
     
-    &-photo-CG{
-        width: 170px;
-        margin-right: 1em;
+    &-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
     }
+    &-photo-CG{
+        max-width: 100%;
+    height: auto;
+    margin-right: 1em;
+    margin-left: 0.5em;
+    }
+    
+        
+        
+    
+    &-titles{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        margin: auto;
+        flex-wrap: wrap;
+        
+        
+    }
+
     &-title{
-        width:55%;
         text-align: center;
+        max-width: 100%;
+        min-width: 80%;
     }
     &-subtitle{
-        width:55%;
+        
         text-align: center;
     }
+    &-logo{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
     &-logoHtmlCssJs{
-        width: 35%;
-        margin: auto;
+        max-width: 40%;
+        height: auto;
+        
     }
-    &-titles{
-        width: 34%;
-        margin: auto;
+    &-logoReactRedux{
+        max-width: 40%;
+        height: auto;
+        
     }
+    
     &-logos{
         margin-top: 1em;
         display: flex;
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
+        align-content: center;
     }
     &-logoPostgresql{
-        height:170px;
+        max-width: 40%;
+        height: auto;
     }
     &-logoExpressNode{
-        height:170px;
+        max-width: 40%;
+        height: auto;
     }
+
+    @media screen and (max-width: 700px){
+        &-photo-CG{
+            max-width: 50%;
+            height: auto;
+            margin-right: 1em;
+            margin-left: 0.5em;
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+        }
+        &-titles{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            margin: auto;
+            flex-wrap: wrap;
+            font-size: 0.6em;
+            
+            
+        }
+    }
+
+    
 
 }

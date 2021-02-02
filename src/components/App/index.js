@@ -14,18 +14,28 @@ const App=() => {
     
     return (
         <div className="app">
-            <Particles className="particles" options={particlesOptions}/>
-            <Header /> 
-            <Main />
-            <Nav
+            <div className="app-particles">
+                    <Particles  options={particlesOptions}/>
+            </div> 
                 
-                itemsOpenedObject={itemsOpenedObject}
-                setItemsOpenedObject={setItemsOpenedObject}
-                itemsVisitedObject={itemsVisitedObject}
-                setItemsVisitedObject={setItemsVisitedObject}
-                
-                
-            />
+            <div className="app-header">
+                <Header />
+            </div>
+            <div className="app-main">
+                <Main />
+            </div>
+            <div className="app-nav">
+                <Nav className="nav"
+                    
+                    itemsOpenedObject={itemsOpenedObject}
+                    setItemsOpenedObject={setItemsOpenedObject}
+                    itemsVisitedObject={itemsVisitedObject}
+                    setItemsVisitedObject={setItemsVisitedObject}
+                    
+                    
+                />
+            </div>
+            
         </div>
     );
 }
